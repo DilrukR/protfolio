@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins";
+
+  background-position: center;
+}
+header {
+  display: flex;
+  background-image: url(./Images/firmbee-com-GANqCr1BRTU-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  align-items: top;
+  padding: 1rem 2.5rem;
+}
+.logo {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  height: 50px;
+}
+
+.logo .fn {
+  color: red;
+}
+.logo .sn {
+  color: yellow;
+  margin-left: 10px;
+}
+.logo .com {
+  color: #04aa6d;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul li {
+  position: relative;
+  padding: 30px 25px;
+  cursor: pointer;
+}
+
+ul:hover li:not(:hover) a {
+  opacity: 0.4;
+}
+
+ul li:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: 0.2s cubic-bezier(0.164, 0.84, 0.44, 1);
+}
+
+ul li:hover::after,
+ul li.active::after {
+  transform: scaleX(1);
+}
+
+ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  transition: 0.4 cubic-bezier(0.164, 0.84, 0.44, 1);
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* hide desktop menu media query */
+
+@media screen and (max-width: 768px) {
+  header {
+    max-height: 500px;
+  }
+
+  header img {
+    max-width: 100%;
+  }
+  header .nav-site {
+    display: none;
+  }
+  .logo .fn {
+    font-size: 16px;
+  }
+  .logo .sn {
+    font-size: 16px;
+  }
+  .logo .com {
+    font-size: 16px;
+  }
+}
+
+.intro{
+  position: absolute;
+}
+
+.intro .heading {
+  margin-top: -500px;
+  margin-left: 100px;
+}
+.intro .heading h1 {
+  font-size: 40px;
+  color: white;
+}
+.intro .heading h2 {
+  font-size: 65px;
+  color: white;
+}
+.intro .heading h3 {
+  font-size: 50px;
+  color: yellow;
+}
+.intro .intro-btn {
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 100px;
+  border-radius: 10px;
+  height: 50px;
+  width: 120px;
+  color: white;
+  background-color: #04aa6d;
+  border: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.intro .intro-btn:hover {
+  background-color: blueviolet;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    position: absolute;
+    padding-right: 100px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
+  .intro .heading {
+    margin-top: -370px;
+    text-align: center;
+  }
+  .intro .heading h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .intro .heading h2 {
+    font-size: 39px;
+    color: white;
+    display:block
+    width: 100%;
+    text-align: center;
+  }
+  .intro .heading h3 {
+    font-size: 30px;
+    color: yellow;
+    text-align: center;
+  }
+  .intro-btn{
+    margin-top: 500px;
+  }
+  .intro .intro-btn-div {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+    margin-bottom: -350px;
+  }
+}
